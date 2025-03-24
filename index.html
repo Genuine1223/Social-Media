@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bio Info</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Bio Info</h1>
+
+        <label for="name">Name:</label>
+        <input type="text" id="name">
+
+        <label for="pronouns">Pronouns:</label>
+        <input type="text" id="pronouns">
+
+        <label for="location">Location:</label>
+        <input type="text" id="location">
+
+        <button onclick="showBio()">Show Bio</button>
+
+        <div id="bioResult"></div>
+    </div>
+
+    <script>
+        function showBio() {
+            let name = document.getElementById("name").value;
+            let pronouns = document.getElementById("pronouns").value;
+            let location = document.getElementById("location").value;
+
+            let bio = "Name: " + name + ", Pronouns: " + pronouns + ", Location: " + location;
+
+            document.getElementById("bioResult").innerHTML = bio;
+        }
+    </script>
+</body>
+</html>
